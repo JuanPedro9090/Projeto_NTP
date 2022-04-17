@@ -1,0 +1,89 @@
+html, body
+{
+ height: 100%;
+ overflow: hidden
+}
+
+#welcome{
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p{
+  margin-bottom:20px;
+  margin-top: 5px;
+}
+
+#formulario{
+  text-align: center;
+  padding: 1em;
+  justify-content: center;
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  margin-top: 50px;
+  height: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+#div__input__nome{
+  margin-bottom: 10px;
+}
+
+#nome{
+  display: inline-block;
+}
+
+#div__input__matricula{
+  margin-bottom: 10px;
+}
+
+#matricula{
+  width: 340px;
+
+}
+
+#div__input__sobrenome{
+  margin-bottom: 10px;
+}
+
+#div__inputs{
+  margin-bottom: 10px;
+}
+
+#div__inputs2{
+  margin-bottom: 10x;
+}
+
+#div__inputs3{
+  margin-bottom: 10px;
+}
+
+#div__inputs4{
+  margin-bottom: 10px;
+}
+
+#div__inputs5{
+  margin-bottom: 10px;
+}
+
+.setores{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#botao_registrar2{
+  margin-top: 50px;
+}
+
+#entreJa{
+  margin-top: 10px;
+}

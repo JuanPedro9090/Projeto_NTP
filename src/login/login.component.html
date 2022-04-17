@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<body>
+<form #loginForm="ngForm" class="formulario" (ngSubmit)="fazerLogin()">
+  <h5>Bem-vindo(a)!</h5>
+  <div pFocusTrap class="card">
+      <label class="labels"
+             for="Matricula">
+      </label>
+      <input placeholder="Matricula"
+             size="30"
+             type="string"
+             id="Matricula"
+             [(ngModel)]="usuario.login"
+             name="Matricula"
+             #campoMatricula="ngModel"
+             required
+             pInputText>
+      <app-mensagem
+             id="campoMatricula"
+             *ngIf="campoMatricula.invalid && campoMatricula.touched"
+             mensagem="Campo obrigatório"
+      ></app-mensagem>
+  </div>
+
+    <div pFocusTrap class="card">
+      <label class="labels"
+             for="senha">
+      </label>
+      <input placeholder="Senha"
+             size="30"
+             id="senha"
+             type="password"
+             [(ngModel)]="usuario.password"
+             name="senha"
+             #campoSenha="ngModel"
+             required
+             pInputText>
+      <app-mensagem
+             id="campoSenha"
+             *ngIf="campoSenha.invalid && campoSenha.touched"
+             mensagem="Campo obrigatório"
+      ></app-mensagem>
+    </div>
+
+  <div pFocusTrap class="recSenha">
+    <app-recuperacao></app-recuperacao>
+  </div>
+
+  <p-button
+    id="botao__login" name="action" (click)="fazerLogin()" [disabled]="loginForm.invalid">Entrar
+  </p-button>
+
+  <p-button
+    [routerLink]="['/registrar']" id="botao_registrar" name="action">Registrar-se
+  </p-button>
+
+</form>
+</body>
+

@@ -1,0 +1,10 @@
+<a (click)="showModalDialog()">Esqueceu sua senha?</a>
+<p-dialog header="Esqueceu sua senha?" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+    <input id="input__dialog" type="email" placeholder="Digite seu Email" size="50" (ngModel)="RecEmail.email" pInputText>
+    <p>* Informe o e-mail utilizado no seu cadastro</p>
+    <p>* Para alteração da senha, siga as instruções que serão enviadas para o seu e-mail</p>
+        <ng-template pTemplate="footer">
+            <p-button icon="pi pi-check" (click)="displayModal=false" label="Enviar" class="p-button-text"></p-button>
+        </ng-template>
+</p-dialog>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<body>
+<div id="div_form" pFocusTrap>
+  <form id="formulario" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
+    <h3 id="welcome">Registre-se</h3>
+    <p id="entreJa">Já é um usuário? <a [routerLink]="['']"> entre já! </a></p>
+    <div id="div__inputs" pFocusTrap>
+      <div id="div__input__nome" pFocusTrap>
+        <input
+          placeholder="Nome"
+          id="nome" type="text"
+          size="40" class="validate"
+          formControlName="name"
+          pInputText
+        >
+        <label for="nome"></label>
+      </div>
+      <div id="div__input__sobrenome" pFocusTrap>
+        <input
+          placeholder="Sobrenome"
+          id="sobrenome"
+          type="text"
+          size="40"
+          class="validate"
+          formControlName="lastName"
+          pInputText
+        >
+        <label for="sobrenome"></label>
+      </div>
+    </div>
+    <div id="div__inputs2" pFocusTrap>
+      <div id="div__input__matricula" pFocusTrap>
+          <input
+            placeholder="Matrícula"
+            id="matricula"
+            type="number"
+            class="validate"
+            pInputText
+            formControlName="matricula"
+            required
+          >
+          <label for="matricula"></label>
+      </div>
+      <div id="div__inputs3" pFocusTrap>
+        <div class="div__input__email" pFocusTrap>
+          <input
+            placeholder="Email"
+            id="email"
+            type="email"
+            size="40"
+            class="validate"
+            pInputText
+            formControlName="email"
+            required
+          >
+          <app-mensagem></app-mensagem>
+          <label for="email"></label>
+        </div>
+      </div>
+    </div>
+    <div id="div__inputs4" pFocusTrap>
+      <div id="div__input__senha" pFocusTrap>
+        <input
+          placeholder="Senha"
+          id="senha"
+          type="password"
+          size="40"
+          class="validate"
+          pInputText
+          formControlName="password"
+          required
+        >
+        <label for="senha"></label>
+      </div>
+    </div>
+    <div id="div__inputs5" pFocusTrap>
+      <div id="div__input__confirmar__senha" pFocusTrap>
+        <input
+          placeholder="Confirmar Senha"
+          id="confirmar_senha"
+          type="password"
+          size="40"
+          class="validate"
+          pInputText
+          formControlName="confirmPassword"
+          required
+        >
+        <label for="confirmar_senha"></label>
+      </div>
+    </div>
+      <app-select class="setores"></app-select>
+    <p-button
+      id="botao_registrar2" name="action" (click)="cadastrar()">Registrar
+    </p-button>
+
+  </form>
+</div>
+</body>
